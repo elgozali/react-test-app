@@ -1,0 +1,139 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css);
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 70px;
+  height: 100vh;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* card style */
+.card {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 7px #dfdfdf;
+}
+/* End card style */
+
+/* default button style */
+button {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #2196F3;
+  padding: 1em;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.5;
+  border-top: 1px #E5E9EB solid;
+  border-bottom: 1px #E5E9EB solid;
+}
+
+button:disabled,
+button[disabled]{
+  pointer-events:none;
+  background-color: #cccccc;
+  color: #666666;
+}
+/* End of default button style */
+
+/* Loading spinner style */
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+    &:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    &:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
+}
+/* End of Loading spinner style */
+
+  /*Remove the scrollbar from Chrome, Safari, Edge and IE*/
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 6px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #42509052;
+    // outline: 1px solid slategrey;
+  }
+  /*Remove the scrollbar from Chrome, Safari, Edge and IE*/
+  input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: 300ms;
+    background-image: linear-gradient(to top, #3f51b5 2px, transparent 2px),
+        linear-gradient(to top, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 0 100%, 100% 100%;
+}
+
+input:focus {
+    background-size: 100% 100%, 100% 100%;
+}

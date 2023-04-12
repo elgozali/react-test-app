@@ -1,0 +1,53 @@
+// Navigation Variables
+$content-width: 100%;
+$breakpoint: 799px;
+$nav-height: 70px;
+$nav-background: #009688;
+$nav-font-color: #ffffff;
+
+// Outer navigation wrapper
+.header {
+    height: $nav-height;
+    background: $nav-background;
+}
+
+// Logo and branding
+.logo {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    color: $nav-font-color;
+    h2 {
+        color: $nav-font-color;
+        text-decoration: none;
+    }
+}
+
+// Container with no padding for navbar
+.nav-container {
+    width: $content-width;
+}
+
+// Navigation
+nav {
+    float: right;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            position: relative;
+            padding-right: 1em;
+            padding-top: 0.8em;
+
+            .logout-btn {
+                background: transparent;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.login {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-70%);
+
+    form {
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        background: #ffffff;
+        max-width: 360px;
+        margin: 0 auto 100px;
+        padding: 2em;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            border-radius: 5px;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: 300ms;
+            background-image: linear-gradient(to top, #3f51b5 2px, transparent 2px),
+                linear-gradient(to top, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 0 100%, 100% 100%;
+        }
+
+        input:focus {
+            background-size: 100% 100%, 100% 100%;
+        }
+
+        .password-input {
+            position: relative;
+            width: 100%;
+
+            input[type="password"] {
+                padding-right: 3.5rem;
+            }
+
+            .toggle-password {
+                position: absolute;
+                top: 0.9em;
+                right: 1rem;
+                cursor: pointer;
+            }
+        }
+
+        .error-list {
+            margin: 0;
+            padding-left: 1em;
+            color: red;
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 1em;
+        }
+
+        .error-list li {
+            margin-bottom: 5px;
+            text-align: left;
+            .error {
+                color: red;
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+        }
+    }
+}
