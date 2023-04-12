@@ -56,6 +56,7 @@ const Login = () => {
                 setErrors(errors);
                 setLoading(false);
             } else {
+                // this is to generating random token
                 const token = Math.random().toString(36).substr(2);
                 let user = {
                     email: email,
