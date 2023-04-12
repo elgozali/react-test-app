@@ -9,6 +9,7 @@ import Home from './containers/Home/Home';
 
 function App() {
   return (
+    /**TODO: to add animation for navigation */
     <BrowserRouter>
       <AppHeader />
       <Switch>
