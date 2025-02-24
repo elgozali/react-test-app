@@ -17,7 +17,7 @@ const Home = () => {
     const [editName, setEditName] = useState('');
     const [editEmail, setEditEmail] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(5);
+    const [itemsPerPage, setItemsPerPage] = useState();
 
     const fetchUsers = () => {
         setIsLoading(true);
@@ -25,6 +25,7 @@ const Home = () => {
             .then((response) => {
                 setIsLoading(false);
                 setUsers(response.data);
+                setItemsPerPage(5);
             })
             .catch((error) => {
                 setIsLoading(false);

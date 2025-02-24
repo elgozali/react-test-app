@@ -39,7 +39,7 @@ const Login = () => {
             errors.push("Password should contain at least one uppercase letter.");
         }
 
-        if (!password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/)) {
+        if (!password.match(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>?]/)) {
             errors.push("Password should contain at least one special character.");
         }
 
